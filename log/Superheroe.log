@@ -1,0 +1,142 @@
+[2021-09-11 20:12:46] [ ERROR] [ApiExceptionHandler:44] org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "null"
+[2021-09-11 20:15:15] [ ERROR] [ApiExceptionHandler:74] org.springframework.dao.EmptyResultDataAccessException: No class com.w2m.superheroe.entity.Superheroe entity with id 1 exists!
+[2021-09-11 20:27:11] [ ERROR] [ApiExceptionHandler:74] /v1/superheroe/delete/1 - org.springframework.dao.EmptyResultDataAccessException: No class com.w2m.superheroe.entity.Superheroe entity with id 1 exists!
+[2021-09-11 20:27:18] [ ERROR] [ApiExceptionHandler:74] /v1/superheroe/delete/1 - org.springframework.dao.EmptyResultDataAccessException: No class com.w2m.superheroe.entity.Superheroe entity with id 1 exists!
+[2021-09-11 20:28:12] [ ERROR] [ApiExceptionHandler:45] /v1/superheroe/delete/1 - org.springframework.dao.EmptyResultDataAccessException: No class com.w2m.superheroe.entity.Superheroe entity with id 1 exists!
+[2021-09-12 21:57:38] [ ERROR] [ApiExceptionHandler:75] /v1/superheroes/id/5 - java.lang.IllegalStateException: No cache could be resolved for 'Builder[public java.util.Optional com.w2m.superheroe.service.SuperheroeService.getSuperheroeId(java.lang.Long)] caches=[] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'' using resolver 'org.springframework.cache.interceptor.SimpleCacheResolver@72bb40ce'. At least one cache should be provided per cache operation.
+[2021-09-12 21:57:52] [ ERROR] [ApiExceptionHandler:75] /v1/superheroes/id/5 - java.lang.IllegalStateException: No cache could be resolved for 'Builder[public java.util.Optional com.w2m.superheroe.service.SuperheroeService.getSuperheroeId(java.lang.Long)] caches=[] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'' using resolver 'org.springframework.cache.interceptor.SimpleCacheResolver@72bb40ce'. At least one cache should be provided per cache operation.
+[2021-09-13 00:27:52] [ INFO ] [ExecutionTimeTrackerAdvice:24] Method nameIterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 203
+[2021-09-13 00:32:59] [ INFO ] [ExecutionTimeTrackerAdvice:24] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 14 ms
+[2021-09-13 00:33:26] [ INFO ] [ExecutionTimeTrackerAdvice:24] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 3 ms
+[2021-09-13 00:33:27] [ INFO ] [ExecutionTimeTrackerAdvice:24] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 4 ms
+[2021-09-13 00:33:27] [ INFO ] [ExecutionTimeTrackerAdvice:24] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 3 ms
+[2021-09-13 01:17:39] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 150 ms
+[2021-09-13 01:18:11] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 65 ms
+[2021-09-13 01:18:44] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 4 ms
+[2021-09-13 01:18:45] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 3 ms
+[2021-09-13 01:46:01] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 147 ms
+[2021-09-13 01:46:07] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 20 ms
+[2021-09-13 01:46:13] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 1 ms
+[2021-09-13 01:46:20] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-13 12:57:28] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 174 ms
+[2021-09-13 12:59:34] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 3 ms
+[2021-09-13 13:00:05] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 1 ms
+[2021-09-13 13:01:46] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 90 ms
+[2021-09-13 13:04:01] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 68 ms
+[2021-09-13 13:30:19] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 115 ms
+[2021-09-13 13:31:08] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 69 ms
+[2021-09-14 00:45:29] [ ERROR] [ApiExceptionHandler:43] /auth/login - org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+[2021-09-14 00:46:55] [ ERROR] [ApiExceptionHandler:73] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-14 00:47:37] [ ERROR] [ApiExceptionHandler:73] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-14 13:09:27] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 141 ms
+[2021-09-14 13:14:17] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 123 ms
+[2021-09-14 13:17:03] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 28 ms
+[2021-09-14 16:45:22] [ ERROR] [ApiExceptionHandler:73] /auth/login - java.lang.ClassCastException: class org.springframework.security.core.userdetails.User cannot be cast to class com.w2m.superheroe.security.dto.UsuarioPrincipal (org.springframework.security.core.userdetails.User is in unnamed module of loader 'app'; com.w2m.superheroe.security.dto.UsuarioPrincipal is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @7b604a5c)
+[2021-09-14 16:49:49] [ ERROR] [ApiExceptionHandler:73] /auth/login - java.lang.ClassCastException: class org.springframework.security.core.userdetails.User cannot be cast to class com.w2m.superheroe.security.dto.UsuarioPrincipal (org.springframework.security.core.userdetails.User is in unnamed module of loader 'app'; com.w2m.superheroe.security.dto.UsuarioPrincipal is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @27e2a449)
+[2021-09-14 17:36:51] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 656 ms
+[2021-09-14 17:41:58] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 172 ms
+[2021-09-14 17:48:23] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 1 ms
+[2021-09-14 17:48:36] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-14 17:49:11] [ ERROR] [ApiExceptionHandler:73] /api/v1/superheroes/3 - org.springframework.security.access.AccessDeniedException: Acceso denegado
+[2021-09-14 17:51:25] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 1 ms
+[2021-09-14 17:51:25] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 88 ms
+[2021-09-14 17:52:10] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 75 ms
+[2021-09-14 17:52:30] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-14 17:52:39] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-14 17:53:38] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 25 ms
+[2021-09-14 17:54:06] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 1 ms
+[2021-09-14 17:54:18] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 1 ms
+[2021-09-14 17:54:27] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 2 ms
+[2021-09-15 17:57:18] [ ERROR] [ApiExceptionHandler:43] /auth/login - org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+[2021-09-15 18:00:17] [ ERROR] [ApiExceptionHandler:43] /auth/login - org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.w2m.superheroe.security.dto.JwtDto> com.w2m.superheroe.controller.AuthController.login(com.w2m.superheroe.security.dto.LoginUsuario,org.springframework.validation.BindingResult)
+[2021-09-15 18:29:11] [ ERROR] [ApiExceptionHandler:43] /auth/login - org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.w2m.superheroe.security.dto.JwtDto> com.w2m.superheroe.controller.AuthController.login(com.w2m.superheroe.security.dto.LoginUsuario,org.springframework.validation.BindingResult)
+[2021-09-15 18:53:35] [ ERROR] [ApiExceptionHandler:43] /auth/login - org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.w2m.superheroe.security.dto.JwtDto> com.w2m.superheroe.controller.AuthController.login(com.w2m.superheroe.security.dto.LoginUsuario,org.springframework.validation.BindingResult)
+[2021-09-15 19:36:44] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 134 ms
+[2021-09-15 20:02:32] [ ERROR] [ApiExceptionHandler:73] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 20:07:55] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 20:13:08] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 376 ms
+[2021-09-15 20:20:48] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 92 ms
+[2021-09-15 20:25:56] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 260 ms
+[2021-09-15 20:29:26] [ ERROR] [ApiExceptionHandler:44] /v1/superheroes/search - org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present
+[2021-09-15 20:30:45] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 111 ms
+[2021-09-15 20:39:25] [ ERROR] [ApiExceptionHandler:74] /v1/superheroes - org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : com.w2m.superheroe.entity.Superheroe; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.w2m.superheroe.entity.Superheroe
+[2021-09-15 20:42:10] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 148 ms
+[2021-09-15 20:44:54] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 153 ms
+[2021-09-15 20:49:49] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 123 ms
+[2021-09-15 20:49:49] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 71 ms
+[2021-09-15 20:51:51] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 232 ms
+[2021-09-15 20:55:54] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 212 ms
+[2021-09-15 20:55:54] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 38 ms
+[2021-09-15 20:55:55] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 46 ms
+[2021-09-15 20:55:55] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 1 ms
+[2021-09-15 20:55:55] [ ERROR] [ApiExceptionHandler:33] /v1/superheroes/1 - com.w2m.superheroe.exception.NotFoundException: Not Fount Exception  - id:1
+[2021-09-15 20:55:56] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 1 ms
+[2021-09-15 20:55:56] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 27 ms
+[2021-09-15 20:55:57] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 20:57:58] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 130 ms
+[2021-09-15 20:57:58] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 36 ms
+[2021-09-15 20:57:59] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 48 ms
+[2021-09-15 20:57:59] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-15 20:57:59] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 5 ms
+[2021-09-15 20:58:00] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-15 20:58:00] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 24 ms
+[2021-09-15 20:58:01] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 21:06:21] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 294 ms
+[2021-09-15 21:06:22] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 83 ms
+[2021-09-15 21:06:23] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 53 ms
+[2021-09-15 21:06:23] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-15 21:06:23] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 5 ms
+[2021-09-15 21:06:24] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-15 21:06:24] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 24 ms
+[2021-09-15 21:06:25] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 21:11:37] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 21:26:25] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 169 ms
+[2021-09-15 21:26:26] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 37 ms
+[2021-09-15 21:26:27] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 53 ms
+[2021-09-15 21:26:27] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 3 ms
+[2021-09-15 21:26:27] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 6 ms
+[2021-09-15 21:26:28] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-15 21:26:28] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 26 ms
+[2021-09-15 21:26:29] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 21:28:29] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 171 ms
+[2021-09-15 21:28:29] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 56 ms
+[2021-09-15 21:28:30] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 50 ms
+[2021-09-15 21:28:30] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-15 21:28:30] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 6 ms
+[2021-09-15 21:28:31] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-15 21:28:31] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 24 ms
+[2021-09-15 21:28:32] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 21:33:21] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 150 ms
+[2021-09-15 21:33:21] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 36 ms
+[2021-09-15 21:33:22] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 70 ms
+[2021-09-15 21:33:23] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 3 ms
+[2021-09-15 21:33:23] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 6 ms
+[2021-09-15 21:33:23] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 3 ms
+[2021-09-15 21:33:24] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 25 ms
+[2021-09-15 21:33:24] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 22:43:00] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 136 ms
+[2021-09-15 22:43:25] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 15 ms
+[2021-09-15 22:43:45] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 28 ms
+[2021-09-15 22:44:47] [ ERROR] [ApiExceptionHandler:74] /v1/superheroes/7 - org.springframework.security.access.AccessDeniedException: Acceso denegado
+[2021-09-15 22:46:27] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-15 22:46:27] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 52 ms
+[2021-09-15 22:46:47] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 2 ms
+[2021-09-15 22:47:34] [ ERROR] [JwtEntryPoint:20] fail en el método commence
+[2021-09-15 22:47:40] [ ERROR] [JwtEntryPoint:20] fail en el método commence
+[2021-09-15 22:47:47] [ ERROR] [JwtEntryPoint:20] fail en el método commence
+[2021-09-15 23:29:11] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+[2021-09-15 23:29:14] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 1240 ms
+[2021-09-15 23:29:15] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 328 ms
+[2021-09-15 23:29:16] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 467 ms
+[2021-09-15 23:29:16] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 3 ms
+[2021-09-15 23:29:16] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 7 ms
+[2021-09-15 23:29:17] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 2 ms
+[2021-09-15 23:29:17] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 71 ms
+[2021-09-16 00:16:07] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.create(Superheroe) time taken to execute : 199 ms
+[2021-09-16 00:16:07] [ INFO ] [ExecutionTimeTracker:20] Method name: void com.w2m.superheroe.service.SuperheroeService.delete(Long) time taken to execute : 53 ms
+[2021-09-16 00:16:08] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findAllSuperheroe() time taken to execute : 186 ms
+[2021-09-16 00:16:09] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 4 ms
+[2021-09-16 00:16:09] [ INFO ] [ExecutionTimeTracker:20] Method name: Superheroe com.w2m.superheroe.service.SuperheroeService.update(Superheroe) time taken to execute : 8 ms
+[2021-09-16 00:16:09] [ INFO ] [ExecutionTimeTracker:20] Method name: Optional com.w2m.superheroe.service.SuperheroeService.findIdSuperheroe(Long) time taken to execute : 11 ms
+[2021-09-16 00:16:10] [ INFO ] [ExecutionTimeTracker:20] Method name: Iterable com.w2m.superheroe.service.SuperheroeService.findLikeName(String) time taken to execute : 71 ms
+[2021-09-16 00:16:11] [ ERROR] [ApiExceptionHandler:67] /auth/login - org.springframework.security.authentication.BadCredentialsException: Bad credentials
