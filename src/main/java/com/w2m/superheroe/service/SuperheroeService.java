@@ -16,13 +16,12 @@ public class SuperheroeService {
 	private ISuperheroeRepository superheroeRepository;
 	
 	@TrackExecutionTime
-	public Iterable<Superheroe> findLikeName(String name) {
-		String likeName = "%" + name.strip() + "%";
+	public Iterable<Superheroe> findLikeName(String likeName) {
 		return superheroeRepository.findByLikeName(likeName);
 	}
 	
 	@TrackExecutionTime
-	public Optional<Superheroe> findIdSuperheroe(Long id) {
+	public Optional<Superheroe> findIdSuperheroe(long id) {
 		return superheroeRepository.findById(id);
 	}
 	
@@ -42,7 +41,7 @@ public class SuperheroeService {
 	}
 	
 	@TrackExecutionTime
-	public void delete(Long id) {
+	public void delete(long id) {
 		superheroeRepository.deleteById(id);
 	}
 

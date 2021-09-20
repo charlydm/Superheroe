@@ -56,9 +56,20 @@ public class SuperheroeTests {
 		
         this.webTestClient
                 .mutate().defaultHeader("Authorization", "Bearer " + token).build()
-                .get().uri("v1/superheroes/search?name", "man")
+                .get().uri("v1/superheroes/search?name=man")
                 .exchange()
                 .expectStatus().isOk();
+    }
+	
+	@Test
+    void testSuperheroesLikeNameIsBlank() {
+		String token = getToken("user", "12345");
+		
+        this.webTestClient
+                .mutate().defaultHeader("Authorization", "Bearer " + token).build()
+                .get().uri("v1/superheroes/search?name")
+                .exchange()
+                .expectStatus().isNoContent();
     }
 	
 	@Test

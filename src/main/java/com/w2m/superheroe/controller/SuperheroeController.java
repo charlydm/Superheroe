@@ -28,13 +28,15 @@ import com.w2m.superheroe.service.SuperheroeService;
 public class SuperheroeController {
 	
 	public static final String SUPERHEROE_URI = "v1/superheroes";
+	
+	public static final String LIKE = "%";
 
 	@Autowired
 	private SuperheroeService superheroeService;
 
 	@GetMapping("/{id}")
 	@Cacheable(value="superheroes")
-	public ResponseEntity<Superheroe> findSuperheroe(@PathVariable Long id) {
+	public ResponseEntity<Superheroe> findSuperheroe(@PathVariable long id) {
 		Optional<Superheroe> superheroe = superheroeService.findIdSuperheroe(id);
 		if (superheroe.isPresent()) {
 			return ResponseEntity.status(HttpStatus.OK).body(superheroe.get());
@@ -52,9 +54,15 @@ public class SuperheroeController {
 	
 	@GetMapping("/search")
 	@Cacheable(value="superheroes")
-	public ResponseEntity<Iterable<Superheroe>> findLikeName(@RequestParam String name) {
-		Iterable<Superheroe> superheroeList = superheroeService.findLikeName(name);
-		return ResponseEntity.status(HttpStatus.OK).body(superheroeList);
+	public ResponseEntity<Iterable<Superheroe>> findLikeName(@RequestParam("name") String name) {
+		if (name.isBlank()) {
+			return ResponseEntity.noContent().build();
+		} else {
+			StringBuilder likeName = new StringBuilder();
+			likeName.append(LIKE).append(name).append(LIKE);
+			Iterable<Superheroe> superheroeList = superheroeService.findLikeName(likeName.toString());
+			return ResponseEntity.status(HttpStatus.OK).body(superheroeList);
+		}
 	}
 
 	@PreAuthorize("hasRole('MANAGER') OR hasRole('ADMIN')")
@@ -68,7 +76,7 @@ public class SuperheroeController {
 	@PreAuthorize("hasRole('MANAGER') OR hasRole('ADMIN')")
 	@PutMapping("/{id}")
 	@CacheEvict(value="superheroes", allEntries = true)
-	public ResponseEntity<Superheroe> updateSuperheroe(@PathVariable Long id, @RequestBody Superheroe superheroe) {
+	public ResponseEntity<Superheroe> updateSuperheroe(@PathVariable long id, @RequestBody Superheroe superheroe) {
 		Optional<Superheroe> updateSuperheroe = superheroeService.findIdSuperheroe(id);
 		if (updateSuperheroe.isPresent()) {
 			updateSuperheroe.get().setName(superheroe.getName());
@@ -80,7 +88,7 @@ public class SuperheroeController {
 	@PreAuthorize("hasRole('ADMIN')")
 	@DeleteMapping("/{id}")
 	@CacheEvict(value="superheroes", allEntries = true)
-	public ResponseEntity<Object> deleteSuperheroe(@PathVariable Long id) {
+	public ResponseEntity<Object> deleteSuperheroe(@PathVariable long id) {
 		superheroeService.delete(id);
 		return ResponseEntity.status(HttpStatus.OK).body(null);
 	}
