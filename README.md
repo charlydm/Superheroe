@@ -54,7 +54,12 @@ java -jar superheroe-1.jar
 
 **Available authorizations:**
 
+![](https://github.com/charlydm/Superheroe/blob/master/images/boton_authorize.png)
+
 - **Value:** Bearer + Token
+
+![](https://github.com/charlydm/Superheroe/blob/master/images/bearer_authorize.png)
+
 
 **Servicios:**
 
