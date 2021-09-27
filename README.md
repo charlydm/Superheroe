@@ -49,6 +49,8 @@ java -jar superheroe-1.jar
 {"password": "12345","user": "admin"}
 ```
 
+- **Response body**
+
 ```bash
 {
   "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn0seyJhdXRob3JpdHkiOiJST0xFX01BTkFHRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfVVNFUiJ9XSwiaWF0IjoxNjMyNzE0OTg5LCJleHAiOjE2MzI3MTg1ODl9.u6UxzSYJuCI3RKaf0OtlvV-m8gx5zS7_-tdjRbdCjeMyqDKGoi0seL1YTbEy2uSJq-VVo48yA8tcl4BjVEXCNA",
