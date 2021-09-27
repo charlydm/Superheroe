@@ -28,11 +28,27 @@ java -jar superheroe-1.jar
 
 - authorize en el siguiente control: auth-controller 
 - Uri: /auth​/login
+- authorize con alguno de los siguientes roles (user, manager o admin)
 
 ![](https://github.com/charlydm/Superheroe/blob/master/images/uri_login.png)
 
-	{"password": "12345","user": "admin"}
-	
+- **Roles:**
+
+- ROLE_USER
+```bash
+{"password": "12345","user": "user"} 
+```
+
+- ROLE_MANAGER
+```bash
+{"password": "12345","user": "manager"}
+```
+
+- ROLE_ADMIN
+```bash
+{"password": "12345","user": "admin"}
+```
+
 ```bash
 {
   "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn0seyJhdXRob3JpdHkiOiJST0xFX01BTkFHRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfVVNFUiJ9XSwiaWF0IjoxNjMyNzE0OTg5LCJleHAiOjE2MzI3MTg1ODl9.u6UxzSYJuCI3RKaf0OtlvV-m8gx5zS7_-tdjRbdCjeMyqDKGoi0seL1YTbEy2uSJq-VVo48yA8tcl4BjVEXCNA",
