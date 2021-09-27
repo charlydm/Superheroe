@@ -10,6 +10,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingRequestHeaderException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.http.HttpStatus;
@@ -30,7 +31,9 @@ public class ApiExceptionHandler {
 	@ExceptionHandler({NotFoundException.class})
 	@ResponseBody
 	public ErrorMessage notFoundRequest(HttpServletRequest request, Exception exception) {
-		logger.error(request.getRequestURI() + " - " + exception);
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(request.getRequestURI()).append(" - ").append(exception);
+		logger.error(stringBuilder);
 		return new ErrorMessage(exception, request.getRequestURI());
 	}
 	
@@ -41,7 +44,9 @@ public class ApiExceptionHandler {
 			MethodArgumentTypeMismatchException.class, HttpMessageNotReadableException.class, EmptyResultDataAccessException.class })
 	@ResponseBody
 	public ErrorMessage badRequest(HttpServletRequest request, Exception exception) {
-		logger.error(request.getRequestURI() + " - " + exception);
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(request.getRequestURI()).append(" - ").append(exception);
+		logger.error(stringBuilder);
 		return new ErrorMessage(exception, request.getRequestURI());
 	}
 	
@@ -49,7 +54,9 @@ public class ApiExceptionHandler {
 	@ExceptionHandler({Forbidden.class})
 	@ResponseBody
 	public ErrorMessage forbiddenRequest(HttpServletRequest request, Exception exception) {
-		logger.error(request.getRequestURI() + " - " + exception);
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(request.getRequestURI()).append(" - ").append(exception);
+		logger.error(stringBuilder);
 		return new ErrorMessage(exception, request.getRequestURI());
 	}
 	
@@ -57,21 +64,27 @@ public class ApiExceptionHandler {
 	@ExceptionHandler({Conflict.class})
 	@ResponseBody
 	public ErrorMessage conflictRequest(HttpServletRequest request, Exception exception) {
-		logger.error(request.getRequestURI() + " - " + exception);
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(request.getRequestURI()).append(" - ").append(exception);
+		logger.error(stringBuilder);
 		return new ErrorMessage(exception, request.getRequestURI());
 	}
 	
 	@ResponseStatus(HttpStatus.UNAUTHORIZED)
 	@ExceptionHandler({Unauthorized.class, BadCredentialsException.class})
 	public void Unauthorized(HttpServletRequest request, Exception exception) {
-		logger.error(request.getRequestURI() + " - " + exception);
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(request.getRequestURI()).append(" - ").append(exception);
+		logger.error(stringBuilder);
 	}
 	
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
 	@ExceptionHandler({Exception.class})
 	@ResponseBody
 	public ErrorMessage fatalErrorUnexpectedException(HttpServletRequest request, Exception exception) {
-		logger.error(request.getRequestURI() + " - " + exception);
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(request.getRequestURI()).append(" - ").append(exception);
+		logger.error(stringBuilder);
 		return new ErrorMessage(exception, request.getRequestURI());
 	}
 

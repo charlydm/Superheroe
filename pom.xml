@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.w2m</groupId>
 	<artifactId>superheroe</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>superheroe</name>
 	<description>Super héroe Project</description>
 	<properties>

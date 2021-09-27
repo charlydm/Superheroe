@@ -21,11 +21,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	@Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		if ("user".equals(username)) {
-			return this.userBuilder(username, new BCryptPasswordEncoder().encode("12345"), "USER");
+			return this.userBuilder(username, new BCryptPasswordEncoder().encode("12345"), "ROLE_USER");
 		} else if ("manager".equals(username)) {
-			return this.userBuilder(username, new BCryptPasswordEncoder().encode("12345"), "MANAGER");
+			return this.userBuilder(username, new BCryptPasswordEncoder().encode("12345"), "ROLE_MANAGER");
 		} else if ("admin".equals(username)) {
-			return this.userBuilder(username, new BCryptPasswordEncoder().encode("12345"), "USER", "MANAGER", "ADMIN");
+			return this.userBuilder(username, new BCryptPasswordEncoder().encode("12345"), "ROLE_USER", "ROLE_MANAGER", "ROLE_ADMIN");
 		} else {
 			throw new UsernameNotFoundException("Usuario no Encontrado");
 		}
@@ -37,9 +37,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		boolean credentialsNonExpired = true;
 		boolean accountNonLocked = true;
 		List<GrantedAuthority> authorities = new ArrayList<>();
-		for (String role : roles) {
-			authorities.add(new SimpleGrantedAuthority("ROLE_" + role));
-		}
+		List<String> role = List.of(roles);
+		role.forEach(r -> authorities.add(new SimpleGrantedAuthority(r)));
 		return new User(username, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
 	}
 

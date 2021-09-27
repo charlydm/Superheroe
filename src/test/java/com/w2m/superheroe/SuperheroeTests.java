@@ -3,6 +3,7 @@ package com.w2m.superheroe;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -28,12 +29,28 @@ public class SuperheroeTests {
 	@Autowired
     AuthenticationManager authenticationManager;
 	
+	@Value("${authentication.user.username}")
+    private String username;
+	
+	@Value("${authentication.user.password}")
+    private String user_password;
+	
+	@Value("${authentication.manager.username}")
+    private String managername;
+	
+	@Value("${authentication.manager.password}")
+    private String manager_password;
+	
+	@Value("${authentication.admin.username}")
+    private String adminname;
+	
+	@Value("${authentication.admin.password}")
+    private String admin_password;
+	
 	@Test
     void testSuperheroesById() {
-		String token = getToken("user", "12345");
-		
-        this.webTestClient
-                .mutate().defaultHeader("Authorization", "Bearer " + token).build()
+		this.webTestClient
+				.mutate().defaultHeader("Authorization", getToken(username, user_password)).build()
                 .get().uri("v1/superheroes/{id}", 1)
                 .exchange()
                 .expectStatus().isOk();
@@ -41,10 +58,8 @@ public class SuperheroeTests {
 	
 	@Test
     void testSuperheroesAll() {
-		String token = getToken("user", "12345");
-		
         this.webTestClient
-                .mutate().defaultHeader("Authorization", "Bearer " + token).build()
+                .mutate().defaultHeader("Authorization", getToken(username, user_password)).build()
                 .get().uri("v1/superheroes")
                 .exchange()
                 .expectStatus().isOk();
@@ -52,10 +67,8 @@ public class SuperheroeTests {
 	
 	@Test
     void testSuperheroesLikeName() {
-		String token = getToken("user", "12345");
-		
         this.webTestClient
-                .mutate().defaultHeader("Authorization", "Bearer " + token).build()
+                .mutate().defaultHeader("Authorization", getToken(username, user_password)).build()
                 .get().uri("v1/superheroes/search?name=man")
                 .exchange()
                 .expectStatus().isOk();
@@ -63,10 +76,8 @@ public class SuperheroeTests {
 	
 	@Test
     void testSuperheroesLikeNameIsBlank() {
-		String token = getToken("user", "12345");
-		
         this.webTestClient
-                .mutate().defaultHeader("Authorization", "Bearer " + token).build()
+                .mutate().defaultHeader("Authorization", getToken(username, user_password)).build()
                 .get().uri("v1/superheroes/search?name")
                 .exchange()
                 .expectStatus().isNoContent();
@@ -74,10 +85,8 @@ public class SuperheroeTests {
 	
 	@Test
     void testSuperheroesCreate() {
-		String token = getToken("manager", "12345");
-		
         this.webTestClient
-                .mutate().defaultHeader("Authorization", "Bearer " + token).build()
+                .mutate().defaultHeader("Authorization", getToken(managername, manager_password)).build()
                 .post().uri("v1/superheroes")
                 .bodyValue(getSuperheroe())
                 .exchange()
@@ -86,10 +95,8 @@ public class SuperheroeTests {
 	
 	@Test
     void testSuperheroesUpdate() {
-		String token = getToken("manager", "12345");
-		
         this.webTestClient
-                .mutate().defaultHeader("Authorization", "Bearer " + token).build()
+                .mutate().defaultHeader("Authorization", getToken(managername, manager_password)).build()
                 .put().uri("v1/superheroes/{id}", 1)
                 .bodyValue(getSuperheroeUpdate())
                 .exchange()
@@ -98,11 +105,18 @@ public class SuperheroeTests {
 	
 	@Test
     void testSuperheroesDelete() {
-		String token = getToken("admin", "12345");
-		
         this.webTestClient
-                .mutate().defaultHeader("Authorization", "Bearer " + token).build()
+                .mutate().defaultHeader("Authorization", getToken(adminname, admin_password)).build()
                 .delete().uri("v1/superheroes/{id}", 5)
+                .exchange()
+                .expectStatus().isOk();
+    }
+	
+	@Test
+    void testSuperheroesOrder() {
+		this.webTestClient
+				.mutate().defaultHeader("Authorization", getToken(username, user_password)).build()
+                .get().uri("v1/superheroes/view/order")
                 .exchange()
                 .expectStatus().isOk();
     }
@@ -110,7 +124,9 @@ public class SuperheroeTests {
 	public String getToken(String user, String password) {
 		Authentication authentication = authenticationManager
 				.authenticate(new UsernamePasswordAuthenticationToken(user, password));
-		return this.jwtProvider.generateToken(authentication);
+		StringBuilder bearerToken = new StringBuilder();
+		bearerToken.append("Bearer ").append(jwtProvider.generateToken(authentication));
+		return bearerToken.toString();
 	}
 	
 	public Superheroe getSuperheroe() {

@@ -17,7 +17,10 @@ public class ExecutionTimeTracker {
 		long stratTime=System.currentTimeMillis();
 		Object obj=pjp.proceed();
 		long endTime=System.currentTimeMillis();
-		logger.info("Method name: " + pjp.getSignature() + " time taken to execute : " + (endTime-stratTime) + " ms");
+		StringBuilder descriptionTime = new StringBuilder();
+		descriptionTime.append("Nombre del metodo: ").append(pjp.getSignature())
+				.append(" tiempo necesario para ejecutar: ").append(endTime - stratTime).append(" ms");
+		logger.info(descriptionTime);
 		return obj;
 	}
 

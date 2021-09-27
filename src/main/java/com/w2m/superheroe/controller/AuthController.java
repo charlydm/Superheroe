@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.w2m.superheroe.exception.BadRequestException;
 import com.w2m.superheroe.security.dto.JwtDto;
-import com.w2m.superheroe.security.dto.LoginUsuario;
+import com.w2m.superheroe.security.dto.Login;
 import com.w2m.superheroe.security.jwt.JwtProvider;
 
 @RestController
@@ -30,12 +30,12 @@ public class AuthController {
     JwtProvider jwtProvider;
 	
 	@PostMapping("/login")
-	public ResponseEntity<JwtDto> login(@RequestBody LoginUsuario loginUsuario, BindingResult bindingResult) {
+	public ResponseEntity<JwtDto> login(@RequestBody Login login, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
-			throw new BadRequestException("campos mal puestos");
+			throw new BadRequestException("Campos mal puestos");
 		}
 		Authentication authentication = authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken(loginUsuario.getNombreUsuario(), loginUsuario.getPassword()));
+				new UsernamePasswordAuthenticationToken(login.getUser(), login.getPassword()));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		String jwt = jwtProvider.generateToken(authentication);
 		UserDetails userDetails = (UserDetails) authentication.getPrincipal();

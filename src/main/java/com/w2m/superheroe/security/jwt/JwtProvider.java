@@ -35,7 +35,7 @@ public class JwtProvider {
                 .compact();
     }
 
-    public String getNombreUsuarioFromToken(String token){
+    public String getUserNameFromToken(String token){
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody().getSubject();
     }
 
@@ -52,7 +52,7 @@ public class JwtProvider {
         }catch (IllegalArgumentException e){
             logger.error("token vacío");
         }catch (SignatureException e){
-            logger.error("fail en la firma");
+            logger.error("Falla en la firma");
         }
         return false;
     }

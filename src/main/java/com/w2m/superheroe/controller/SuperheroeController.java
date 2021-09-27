@@ -1,6 +1,8 @@
 package com.w2m.superheroe.controller;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
@@ -91,6 +93,16 @@ public class SuperheroeController {
 	public ResponseEntity<Object> deleteSuperheroe(@PathVariable long id) {
 		superheroeService.delete(id);
 		return ResponseEntity.status(HttpStatus.OK).body(null);
+	}
+	
+	@GetMapping("/view/order")
+	public ResponseEntity<Object> superheroesOrderList() {
+		List<String> superheroes = List.of("Silver Surfer", "Hulk", "Thor", "Ant Man", "Black Panther", "Spaider Man", "Doctor Strange", "Iron Man", "Daredevil");
+		var superheroesOrder = superheroes.stream().filter(s -> !s.equalsIgnoreCase("spaider man"))
+							.sorted()
+							.map(j -> j.toString().toUpperCase())
+							.collect(Collectors.toList());
+		return ResponseEntity.status(HttpStatus.OK).body(superheroesOrder);
 	}
 
 }
