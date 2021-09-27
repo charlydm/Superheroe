@@ -29,6 +29,8 @@ java -jar superheroe-1.jar
 - authorize en el siguiente control: auth-controller 
 - Uri: /auth​/login
 
+![](https://github.com/charlydm/Superheroe/blob/master/images/uri_login.png)
+
 	{"password": "12345","user": "admin"}
 	
 ```bash
