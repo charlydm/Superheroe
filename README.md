@@ -1,4 +1,4 @@
-### Bienvenidos al repositorio Súper héroes para W2M - MINDATA
+### Bienvenidos al repositorio Súper héroes
 **Descripción:**
 
 API que permite hacer mantenimiento de súper héroes.
