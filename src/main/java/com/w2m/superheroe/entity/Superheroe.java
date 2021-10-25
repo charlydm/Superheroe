@@ -20,6 +20,7 @@ public class Superheroe {
 	private Long id;
 	
 	@Column
+	@NotNull
 	private String name;
 	
 }
