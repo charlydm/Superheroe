@@ -57,14 +57,10 @@ public class SuperheroeController {
 	@GetMapping("/search")
 	@Cacheable(value="superheroes")
 	public ResponseEntity<Iterable<Superheroe>> findLikeName(@RequestParam("name") String name) {
-		if (name.isBlank()) {
-			return ResponseEntity.noContent().build();
-		} else {
-			StringBuilder likeName = new StringBuilder();
-			likeName.append(LIKE).append(name).append(LIKE);
-			Iterable<Superheroe> superheroeList = superheroeService.findLikeName(likeName.toString());
-			return ResponseEntity.status(HttpStatus.OK).body(superheroeList);
-		}
+		StringBuilder likeName = new StringBuilder();
+		likeName.append(LIKE).append(name).append(LIKE);
+		Iterable<Superheroe> superheroeList = superheroeService.findLikeName(likeName.toString());
+		return ResponseEntity.status(HttpStatus.OK).body(superheroeList);
 	}
 
 	@PreAuthorize("hasRole('MANAGER') OR hasRole('ADMIN')")
